@@ -1,0 +1,20 @@
+<!ELEMENT catalog (product+)>
+<!ELEMENT product (specifications+, options?, price+, notes?)>
+	<!ATTLIST product name CDATA #REQUIRED>
+	<!ATTLIST product category (HandTool|Table|ShopPro) "HandTool">
+	<!ATTLIST product partnum CDATA #REQUIRED>
+	<!ATTLIST product plant (Boston|Buffalo|Chicago) "Chicago">
+	<!ATTLIST product inventory (InStock|BackOrdered|Discontinued) "InStock">
+<!ELEMENT specifications (#PCDATA)>
+	<!ATTLIST specifications weight CDATA #IMPLIED>
+	<!ATTLIST specifications power CDATA #IMPLIED>
+<!ELEMENT options EMPTY>
+	<!ATTLIST options finish (Metal|Polished|Matte) "Matte">
+	<!ATTLIST options adapter (Included|Optional|NotApplicable) "Included">
+	<!ATTLIST options case (HardShell|Soft|NotApplicable) "HardShell">
+<!ELEMENT price (#PCDATA)>
+	<!ATTLIST price msrp CDATA #IMPLIED>
+	<!ATTLIST price wholesale CDATA #IMPLIED>
+	<!ATTLIST price street CDATA #IMPLIED>
+	<!ATTLIST price shipping CDATA #IMPLIED>
+<!ELEMENT notes (#PCDATA)>

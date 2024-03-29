@@ -1,0 +1,23 @@
+<?xml version="1.0"  ?>
+<!DOCTYPE record [
+<!ELEMENT record (student)+ >
+<!ELEMENT student (name,marks) >
+<!ATTLIST student rollnumber (CDATA) #REQUIRED>
+<!ELEMENT name (f_name,l_name?)>
+<!ELEMENT f_name (#PCDATA)>
+<!ELEMENT l_name (#PCDATA)>
+<!ELEMENT marks (subject,ob_marks)>
+<!ELEMENT subject (#PCDATA)>
+<!ELEMENT ob_marks (#PCDATA)>] >
+
+<record> 
+	<student rollnumber="1">
+		<name>
+			<f_name> Ram </f_name>
+		</name>
+		<marks>
+			<subject> IWT </subject>
+			<ob_marks> 100 </ob_marks>
+		</marks>
+	</student>
+</record>

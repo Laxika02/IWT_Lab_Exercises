@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE catalog SYSTEM "prod.dtd">
+	
+<catalog>
+	<product name="power drill" partnum="p23-456" plant="Boston" inventory="InStock">
+		<specifications weight="18.3" power="ac"> hkfjhdf
+		</specifications>
+		<price msrp="12.33" wholesale="18.45" shipping="5.67">
+			Keep these prices up-to-date.
+		</price>
+		<notes>
+			Our best selling item.
+		</notes>
+	</product>
+	<product name="radial saw" partnum="p83-730" category="Table" inventory="BackOrdered">
+		<specifications weight="88.6"/>
+		<price msrp="172.27" wholesale="144.85" street="157.94" shipping="19.80"/>
+	</product>
+</catalog>

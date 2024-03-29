@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 25</title>
+</head>
+<body>
+    <form action="#">
+        <input type="number" name="inputV" onchange="TempCon()">
+        <select name="inputOp" id="">
+            <option value="C">Celsius</option>
+            <option value="K">Kelvin</option>
+            <option value="F">Fahrenheit</option>
+        </select>
+        <br>
+        <input type="number" name="outputV" onchange="TempCon()">
+        <select name="outputOp" id="">
+            <option value="C">Celsius</option>
+            <option value="K">Kelvin</option>
+            <option value="F">Fahrenheit</option>
+        </select>
+    </form>
+
+    <script>
+        function TempCon(){
+            inputV = document.forms[0].elements['inputV'].value;
+            // document.forms[0].elements['outputV'].value = inputV;
+            inputOp = document.forms[0].elements['inputOp'].value;
+            outputOp = document.forms[0].elements['outputOp'].value;
+            // inputV = parseFloat(inputV);
+            if(inputOp == 'C' && outputOp == 'F'){
+                result = (parseFloat(inputV)*9/5)+32;
+            }
+            else if(inputOp == 'F' && outputOp == 'C'){
+                result = (parseFloat(inputV)-32)*5/9;
+            }
+            else if(inputOp == 'C' && outputOp == 'C'){
+                result = parseFloat(inputV);
+            }
+            else if(inputOp == 'C' && outputOp == 'K'){
+                result = parseFloat(inputV)+273.15;
+            }
+            else if(inputOp == 'K' && outputOp == 'K'){
+                result = parseFloat(inputV);
+            }
+            else if(inputOp == 'F' && outputOp == 'F'){
+                result = parseFloat(inputV);
+            }
+            else if(inputOp == 'K' && outputOp == 'C'){
+                result = parseFloat(inputV)-273.15;
+            }
+            else if(inputOp == 'F' && outputOp == 'K'){
+                cel = (parseFloat(inputV)-32)*5/9;
+                result = cel+273.15;
+            }
+            else if(inputOp == 'K' && outputOp == 'F'){
+                cel = parseFloat(inputV)-273.15;
+                result = cel+273.15;
+            }
+            document.forms[0].elements['outputV'].value = result;
+        }
+    </script>
+</body>
+</html>
